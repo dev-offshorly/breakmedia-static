@@ -1,0 +1,1255 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js no-svg ie ie6 lt-ie9 lt-ie8 lt-ie7" lang="en-US"> <![endif]-->
+<!--[if IE 7]><html class="no-js no-svg ie ie7 lt-ie9 lt-ie8" lang="en-US"> <![endif]-->
+<!--[if IE 8]><html class="no-js no-svg ie ie8 lt-ie9" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js no-svg" lang="en-US"> <!--<![endif]-->
+
+<!-- Mirrored from breakmedia.lndo.site/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jun 2026 10:14:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="app/themes/breakmedia/style.css" type="text/css" media="screen" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="pingback" href="wp/xmlrpc.php" />
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <title>Breakmedia</title>
+<meta name='robots' content='noindex, nofollow' />
+
+<!-- The SEO Framework by Sybre Waaijer -->
+<meta property="og:image" content="app/uploads/2022/03/cropped-favicon-blue.png" />
+<meta property="og:image:width" content="512" />
+<meta property="og:image:height" content="512" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Breakmedia" />
+<meta property="og:url" content="index.html" />
+<meta property="og:site_name" content="Breakmedia" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Breakmedia" />
+<meta name="twitter:image" content="app/uploads/2022/03/cropped-favicon-blue.png" />
+<meta name="twitter:image:width" content="512" />
+<meta name="twitter:image:height" content="512" />
+<link rel="canonical" href="index.html" />
+<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://breakmedia.lndo.site/",
+    "name": "Breakmedia",
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://breakmedia.lndo.site/search/{search_term_string}/",
+        "query-input": "required name=search_term_string"
+    }
+}</script>
+<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "url": "https://breakmedia.lndo.site/",
+    "name": "Breakmedia",
+    "logo": "https://breakmedia.lndo.site/app/uploads/2022/03/cropped-favicon-blue.png"
+}</script>
+<!-- / The SEO Framework by Sybre Waaijer | 1.52ms meta | 1.57ms boot -->
+
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel='dns-prefetch' href='http://ajax.googleapis.com/' />
+<link rel="alternate" type="application/rss+xml" title="Breakmedia &raquo; Feed" href="feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Breakmedia &raquo; Comments Feed" href="comments/feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"wpemoji":"https:\/\/breakmedia.lndo.site\/wp\/wp-includes\/js\/wp-emoji.js?ver=5.7.1","twemoji":"https:\/\/breakmedia.lndo.site\/wp\/wp-includes\/js\/twemoji.js?ver=5.7.1"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * So easy, even a baby could do it!
+				 *
+				 *  To test for Emoji 13 support, try to render a new emoji: Man Feeding Baby.
+				 *
+				 * The Man Feeding Baby emoji is a ZWJ sequence combining 👨 Man, a Zero Width Joiner and 🍼 Baby Bottle.
+				 *
+				 * 0xD83D, 0xDC68 == Man emoji.
+				 * 0x200D == Zero-Width Joiner (ZWJ) that links the two code points for the new emoji or
+				 * 0x200B == Zero-Width Space (ZWS) that is rendered for clients not supporting the new emoji.
+				 * 0xD83C, 0xDF7C == Baby Bottle.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0x200D, 0xD83C, 0xDF7C],
+					[0xD83D, 0xDC68, 0x200B, 0xD83C, 0xDF7C]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='wp/wp-includes/css/dist/block-library/stylea78f.css?ver=5.7.1' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='app/plugins/contact-form-7/includes/css/styles5406.css?ver=5.5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='jvcf7_client_css-css'  href='app/plugins/jquery-validation-for-contact-form-7/includes/assets/css/jvcf7_client5fba.css?ver=5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='sage/css-css'  href='app/themes/breakmedia/dist/css/app.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='sage/css-override-css'  href='app/themes/breakmedia/dist/css/module-override.min.html' type='text/css' media='all' />
+<link rel="https://api.w.org/" href="wp-json/index.html" /><link rel="alternate" type="application/json" href="wp-json/wp/v2/pages/762.json" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="wp/xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp/wp-includes/wlwmanifest.xml" /> 
+<link rel="alternate" type="application/json+oembed" href="wp-json/oembed/1.0/embede4e4.json?url=https%3A%2F%2Fbreakmedia.lndo.site%2F" />
+<link rel="alternate" type="text/xml+oembed" href="wp-json/oembed/1.0/embeda7cc?url=https%3A%2F%2Fbreakmedia.lndo.site%2F&amp;format=xml" />
+<link rel="icon" href="app/uploads/2022/03/cropped-favicon-blue-32x32.png" sizes="32x32" />
+<link rel="icon" href="app/uploads/2022/03/cropped-favicon-blue-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="app/uploads/2022/03/cropped-favicon-blue-180x180.png" />
+<meta name="msapplication-TileImage" content="https://breakmedia.lndo.site/app/uploads/2022/03/cropped-favicon-blue-270x270.png" />
+
+			</head>
+
+	<body class="home page-template-default page page-id-762 wp-front" data-template="base.twig">
+		
+		<header class="uk-visible@m">
+							<div id="global-header-desktop" class="global-header desktop uk-visible@m">     <div class="content-wrapper">
+        <div class="nav-elements-wrapper uk-flex uk-flex-between uk-flex-middle">
+            <div class="desktop-header__logo-container">
+                                <a href="index.html"><img src="app/uploads/2022/03/break-media-logo.svg" alt="logo"></a>
+                            </div>
+            <div class="desktop-header__menu-container">
+                                <ul class="uk-navbar-nav main-menu uk-visible@m">
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1140 main-menu-item">
+		<a  class="" href="#signposts" uk-scroll>Case Studies</a>
+			</li>
+			<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1141 main-menu-item">
+		<a  class="" href="#values-approach" uk-scroll>Values & Approach</a>
+			</li>
+			<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1142 main-menu-item">
+		<a  class="" href="#how-we-work" uk-scroll>How We Work</a>
+			</li>
+			<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1143 main-menu-item">
+		<a  class="" href="#about-us" uk-scroll>People</a>
+			</li>
+			<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1144 main-menu-item">
+		<a  class="" href="#capabilities" uk-scroll>Capabilities</a>
+			</li>
+			<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1145 main-menu-item">
+		<a  class="" href="#contact-us" uk-scroll>Contact Us</a>
+			</li>
+	             
+</ul>            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="global-header-mobile" class="global-header mobile uk-hidden@m">
+    <div class="content-wrapper">
+        <div class="nav-elements-wrapper uk-flex uk-flex-between uk-flex-middle">
+            <div class="desktop-header__logo-container">
+                                <a href="index.html"><img src="app/uploads/2022/03/break-media-logo.svg" alt="logo"></a>
+                            </div>
+            <div class="desktop-header__menu-container">
+                <a href="#main-mobile-drawer" uk-toggle class="mobile-menu-button">
+                    <img src="app/themes/breakmedia/dist/images/menu-icon.png" alt="Menu">
+                </a>
+                <nav id="main-mobile-drawer" uk-offcanvas="mode: none; overlay: true" class="mobile-drawer-offcanvas uk-animation-fade uk-animation-fast">
+    <div class="uk-offcanvas-bar canvas-bar uk-width-1-1 uk-padding-remove">
+        <div class="uk-width-1-1 content-wrapper">
+            <div class="header uk-flex uk-flex-between uk-flex-middle uk-position-relative">
+                <div class="logo-standard">
+                    <a href="index.html">
+                        <img src="app/uploads/2022/03/break-media-logo.svg" alt="break-media-logo.svg">
+                    </a>
+                </div>
+                <a class="uk-offcanvas-close offcanvas-close" type="button" uk-close><img src="app/themes/breakmedia/dist/images/close-icon.jpg" alt="Close"></a>
+            </div>
+            <ul class="mobile-menu md-list uk-list">
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1140 md-menu-item uk-margin-remove-top">
+                        <a  class="text-black uk-text-bold md-menu-item-link" href="#signposts" uk-scroll>Case Studies</a>
+                                            </li>
+                                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1141 md-menu-item uk-margin-remove-top">
+                        <a  class="text-black uk-text-bold md-menu-item-link" href="#values-approach" uk-scroll>Values & Approach</a>
+                                            </li>
+                                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1142 md-menu-item uk-margin-remove-top">
+                        <a  class="text-black uk-text-bold md-menu-item-link" href="#how-we-work" uk-scroll>How We Work</a>
+                                            </li>
+                                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1143 md-menu-item uk-margin-remove-top">
+                        <a  class="text-black uk-text-bold md-menu-item-link" href="#about-us" uk-scroll>People</a>
+                                            </li>
+                                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1144 md-menu-item uk-margin-remove-top">
+                        <a  class="text-black uk-text-bold md-menu-item-link" href="#capabilities" uk-scroll>Capabilities</a>
+                                            </li>
+                                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1145 md-menu-item uk-margin-remove-top">
+                        <a  class="text-black uk-text-bold md-menu-item-link" href="#contact-us" uk-scroll>Contact Us</a>
+                                            </li>
+                                            </ul>
+        </div>
+    </div>
+</nav>            </div>
+        </div>
+    </div>
+</div>
+					</header>
+
+		<header uk-sticky class="uk-hidden@m uk-sticky uk-sticky-fixed">
+							<div id="global-header-desktop" class="global-header desktop uk-visible@m">     <div class="content-wrapper">
+        <div class="nav-elements-wrapper uk-flex uk-flex-between uk-flex-middle">
+            <div class="desktop-header__logo-container">
+                                <a href="index.html"><img src="app/uploads/2022/03/break-media-logo.svg" alt="logo"></a>
+                            </div>
+            <div class="desktop-header__menu-container">
+                                <ul class="uk-navbar-nav main-menu uk-visible@m">
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1140 main-menu-item">
+		<a  class="" href="#signposts" uk-scroll>Case Studies</a>
+			</li>
+			<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1141 main-menu-item">
+		<a  class="" href="#values-approach" uk-scroll>Values & Approach</a>
+			</li>
+			<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1142 main-menu-item">
+		<a  class="" href="#how-we-work" uk-scroll>How We Work</a>
+			</li>
+			<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1143 main-menu-item">
+		<a  class="" href="#about-us" uk-scroll>People</a>
+			</li>
+			<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1144 main-menu-item">
+		<a  class="" href="#capabilities" uk-scroll>Capabilities</a>
+			</li>
+			<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1145 main-menu-item">
+		<a  class="" href="#contact-us" uk-scroll>Contact Us</a>
+			</li>
+	             
+</ul>            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="global-header-mobile" class="global-header mobile uk-hidden@m">
+    <div class="content-wrapper">
+        <div class="nav-elements-wrapper uk-flex uk-flex-between uk-flex-middle">
+            <div class="desktop-header__logo-container">
+                                <a href="index.html"><img src="app/uploads/2022/03/break-media-logo.svg" alt="logo"></a>
+                            </div>
+            <div class="desktop-header__menu-container">
+                <a href="#main-mobile-drawer" uk-toggle class="mobile-menu-button">
+                    <img src="app/themes/breakmedia/dist/images/menu-icon.png" alt="Menu">
+                </a>
+                <nav id="main-mobile-drawer" uk-offcanvas="mode: none; overlay: true" class="mobile-drawer-offcanvas uk-animation-fade uk-animation-fast">
+    <div class="uk-offcanvas-bar canvas-bar uk-width-1-1 uk-padding-remove">
+        <div class="uk-width-1-1 content-wrapper">
+            <div class="header uk-flex uk-flex-between uk-flex-middle uk-position-relative">
+                <div class="logo-standard">
+                    <a href="index.html">
+                        <img src="app/uploads/2022/03/break-media-logo.svg" alt="break-media-logo.svg">
+                    </a>
+                </div>
+                <a class="uk-offcanvas-close offcanvas-close" type="button" uk-close><img src="app/themes/breakmedia/dist/images/close-icon.jpg" alt="Close"></a>
+            </div>
+            <ul class="mobile-menu md-list uk-list">
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1140 md-menu-item uk-margin-remove-top">
+                        <a  class="text-black uk-text-bold md-menu-item-link" href="#signposts" uk-scroll>Case Studies</a>
+                                            </li>
+                                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1141 md-menu-item uk-margin-remove-top">
+                        <a  class="text-black uk-text-bold md-menu-item-link" href="#values-approach" uk-scroll>Values & Approach</a>
+                                            </li>
+                                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1142 md-menu-item uk-margin-remove-top">
+                        <a  class="text-black uk-text-bold md-menu-item-link" href="#how-we-work" uk-scroll>How We Work</a>
+                                            </li>
+                                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1143 md-menu-item uk-margin-remove-top">
+                        <a  class="text-black uk-text-bold md-menu-item-link" href="#about-us" uk-scroll>People</a>
+                                            </li>
+                                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1144 md-menu-item uk-margin-remove-top">
+                        <a  class="text-black uk-text-bold md-menu-item-link" href="#capabilities" uk-scroll>Capabilities</a>
+                                            </li>
+                                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1145 md-menu-item uk-margin-remove-top">
+                        <a  class="text-black uk-text-bold md-menu-item-link" href="#contact-us" uk-scroll>Contact Us</a>
+                                            </li>
+                                            </ul>
+        </div>
+    </div>
+</nav>            </div>
+        </div>
+    </div>
+</div>
+					</header>
+
+		<section id="content" role="main" class="section-wrapper">
+			<div class="wrapper">
+				
+<style>
+
+    .content-wrapper {
+        max-width: 1316px;
+        margin: 0 auto;
+    }
+
+    .content-wrapper.narrow {
+        max-width: 960px;
+    }
+
+    @media screen and (min-width: 1280px) and (max-width: 1440px) {
+        .content-wrapper {
+            max-width: 80%;
+        }
+    }
+
+    @media screen and (max-width: 1280px ) {
+        .content-wrapper {
+            max-width: 960px;
+        }
+    }
+
+    @media screen and (max-width: 960px ) {
+        .content-wrapper {
+            padding: 0 25px;
+        }
+    }
+
+    
+    @media screen and (max-width: 1366px ) {
+        .content-wrapper {
+            padding: 0 25px;
+        }
+    }
+
+    
+    .padding {
+        padding: 40px 0;
+    }
+
+     @media screen and (min-width: 960px) {
+         .padding {
+            padding: 80px 0;
+        }
+     }
+
+    .bg--dark {
+        background-color: #002239
+    }
+
+    .bg--neutral {
+        background-color: #f2f3f3
+    }
+
+    .bg--light {
+        background-color: rgba(255, 255, 255, 1)
+    }
+
+            
+    .button--primary {
+        padding: 0 30px;
+        font-weight: 600;
+        font-size: 16px;
+        
+        background-color: #3c64b1;
+        color: #FFF;
+
+        border: 0px none transparent;
+        border-radius: 0px;
+    }
+
+    .button--secondary {
+        padding: 0 30px;
+        font-weight: 400;
+        font-size: 16px;
+
+        background-color: #62B6CB;
+        color: #fff;
+
+        border: 1px solid #62B6CB;
+        border-radius: 0px;
+    }
+
+    .button--simple {
+        font-size: 16px;
+        color: #62b6cb;
+    }
+
+    @media screen and (min-width: 960px) {
+        .button--primary {
+            font-size: 19px;
+        }
+    
+        .button--secondary {
+            font-size: 18px;
+        }
+    
+        .button--simple {
+            font-size: 19px;
+        }
+    }
+
+                        
+        
+    h1 {
+        font-weight: 600;
+        font-size: calc(40px + (90 - 40) * ((100vw - 480px) / (1920 - 480)));
+        letter-spacing: 4.5px;
+        line-height: calc(50px + (120 - 50) * ((100vw - 480px) / (1920 - 480)));
+    }
+
+    h2 {
+        font-weight: 600;
+        font-size: calc(28px + (50 - 28) * ((100vw - 480px) / (1920 - 480)));
+        letter-spacing: 4.5px;
+        line-height: calc(30px + (70 - 30) * ((100vw - 480px) / (1920 - 480)));
+    }
+
+    h3 {
+        font-weight: 600;
+        font-size: calc(22px + (28 - 22) * ((100vw - 480px) / (1920 - 480)));
+        letter-spacing: 0px;
+        line-height: calc(26px + (32 - 26) * ((100vw - 480px) / (1920 - 480)));
+    }
+
+    h4 {
+        font-weight: 600;
+        font-size: calc(20px + (26 - 20) * ((100vw - 480px) / (1920 - 480)));
+        letter-spacing: 0px;
+        line-height: calc(24px + (32 - 24) * ((100vw - 480px) / (1920 - 480)));
+    }
+
+    h5 {
+        font-weight: 600;
+        font-size: calc(18px + (20 - 18) * ((100vw - 480px) / (1920 - 480)));
+        letter-spacing: 0px;
+        line-height: calc(20px + (22 - 20) * ((100vw - 480px) / (1920 - 480)));
+    }
+
+    body,
+    p {
+        font-weight: 400;
+        font-size: calc(16px + (19 - 16) * ((100vw - 480px) / (1920 - 480)));
+        letter-spacing: 0.2px;
+        line-height: calc(32px + (32 - 32) * ((100vw - 480px) / (1920 - 480)));
+    }
+
+    @media screen and (min-width: 960px) {
+        h1 {
+            font-weight: 600;
+            letter-spacing: 4.5px;
+        }
+
+        h2 {
+            font-weight: 600;
+            letter-spacing: 4.5px;
+        }
+
+        h3 {
+            font-weight: 600;
+            letter-spacing: 0px;
+            line-height: 32px;
+        }
+
+        h4 {
+            font-weight: 600;
+            letter-spacing: 0px;
+        }
+
+        h5 {
+            font-weight: 600;
+            letter-spacing: 0px;
+        }
+
+        body,
+        p {
+            font-weight: 400;
+            letter-spacing: 0.2px;
+        }
+    }
+</style>
+<div class="homepage-hero">
+  <div class="content-wrapper">
+    <div class="titles-wrap">
+                                    <h1 id="main-title-1" class="main-title main-title">BIG AGENCY THINKING, <br />
+WITHOUT THE PRICE TAG.</h1>
+                              <h1 id="main-title-2" class="main-title main-title animation-end">STRATEGY, CREATIVITY <br />
+AND MEDIA.</h1>
+                              <h1 id="main-title-3" class="main-title main-title animation-end">MAXIMUM VALUE.</h1>
+          </div>
+    <div class="video-wrap">
+      <video class="uk-visible@s homepage-video" autoplay="true" muted="muted" preload="auto|metadata|none" playsinline>
+        <source src="app/uploads/2022/03/break-media-hero-video-v3.mp4" type="video/mp4">
+      </video>
+      <video class="uk-hidden@s homepage-video" autoplay="true" muted="muted" preload="auto|metadata|none" playsinline>
+        <source src="app/uploads/2022/05/hero-video-mobile.mp4" type="video/mp4">
+      </video>
+    </div>
+    <a href="#signposts" class="scroll-down-btn" uk-scroll><img src="app/themes/breakmedia/dist/images/down-arrow-icon.svg" alt="Scroll Down"></a>
+    <div class="overlay"></div>
+  </div>
+</div>
+
+
+
+
+<div id="signposts" class="uk-width-1-1 signposts  uk-padding-remove-bottom">
+
+    <div uk-grid class="uk-grid uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-3@l uk-grid-match columns-3 uk-grid-collapse" 
+    uk-scrollspy="cls: uk-animation-slide-bottom; target: .animate-element; delay: 200;    ">
+                  
+  <div class="animate-element">
+    <a class="uk-card uk-card-default card" href="work/nizoral/index.html">
+      <div class="uk-card-media-top" style="background-image: url('app/uploads/2022/03/nizoral.png')"></div>
+      <div class="description uk-width-1-1 uk-visible@s">
+        <div class="logo">
+          <img src=app/uploads/2022/03/nizoral-logo-1.svg>
+        </div>
+        <div class="content">
+          <h3>Scaling Video Engagement.</h3>
+        </div>
+      </div>
+      <div class="description-mobile uk-width-1-1 uk-hidden@s">
+        <div class="logo">
+          <img src=app/uploads/2022/03/nizoral-logo-1.svg>
+        </div>
+        <div class="content">
+          <h3>Scaling Video Engagement.</h3>
+        </div>
+      </div>
+    </a>
+  </div>
+
+                  
+  <div class="animate-element">
+    <a class="uk-card uk-card-default card" href="work/mckinsey-and-company/index.html">
+      <div class="uk-card-media-top" style="background-image: url('app/uploads/2022/03/mckinsey-company.png')"></div>
+      <div class="description uk-width-1-1 uk-visible@s">
+        <div class="logo">
+          <img src=app/uploads/2022/03/MandC-logo-1.svg>
+        </div>
+        <div class="content">
+          <h3>Guiding The Future of Asia.</h3>
+        </div>
+      </div>
+      <div class="description-mobile uk-width-1-1 uk-hidden@s">
+        <div class="logo">
+          <img src=app/uploads/2022/03/MandC-logo-1.svg>
+        </div>
+        <div class="content">
+          <h3>Guiding The Future of Asia.</h3>
+        </div>
+      </div>
+    </a>
+  </div>
+
+                  
+  <div class="animate-element">
+    <a class="uk-card uk-card-default card" href="work/indosole/index.html">
+      <div class="uk-card-media-top" style="background-image: url('app/uploads/2022/03/indosole.png')"></div>
+      <div class="description uk-width-1-1 uk-visible@s">
+        <div class="logo">
+          <img src=app/uploads/2022/03/indosole-logo-1.svg>
+        </div>
+        <div class="content">
+          <h3>Not Just Advertising Sandals.</h3>
+        </div>
+      </div>
+      <div class="description-mobile uk-width-1-1 uk-hidden@s">
+        <div class="logo">
+          <img src=app/uploads/2022/03/indosole-logo-1.svg>
+        </div>
+        <div class="content">
+          <h3>Not Just Advertising Sandals.</h3>
+        </div>
+      </div>
+    </a>
+  </div>
+
+                  
+  <div class="animate-element">
+    <a class="uk-card uk-card-default card" href="work/grainshaker/index.html">
+      <div class="uk-card-media-top" style="background-image: url('app/uploads/2022/03/grainshaker-1.png')"></div>
+      <div class="description uk-width-1-1 uk-visible@s">
+        <div class="logo">
+          <img src=app/uploads/2022/03/grainshaker-white-logo-1.png>
+        </div>
+        <div class="content">
+          <h3>Launching Vodka in Hong Kong.</h3>
+        </div>
+      </div>
+      <div class="description-mobile uk-width-1-1 uk-hidden@s">
+        <div class="logo">
+          <img src=app/uploads/2022/03/grainshaker-white-logo-1.png>
+        </div>
+        <div class="content">
+          <h3>Launching Vodka in Hong Kong.</h3>
+        </div>
+      </div>
+    </a>
+  </div>
+
+                  
+  <div class="animate-element">
+    <a class="uk-card uk-card-default card" href="work/beefsteak-club/index.html">
+      <div class="uk-card-media-top" style="background-image: url('app/uploads/2022/03/beefsteak-club.png')"></div>
+      <div class="description uk-width-1-1 uk-visible@s">
+        <div class="logo">
+          <img src=app/uploads/2022/03/beefsteak-club-logo-1.png>
+        </div>
+        <div class="content">
+          <h3>Raising The Steaks, <br />
+For A Hong Kong Launch.</h3>
+        </div>
+      </div>
+      <div class="description-mobile uk-width-1-1 uk-hidden@s">
+        <div class="logo">
+          <img src=app/uploads/2022/03/beefsteak-club-logo-1.png>
+        </div>
+        <div class="content">
+          <h3>Raising The Steaks, <br />
+For A Hong Kong Launch.</h3>
+        </div>
+      </div>
+    </a>
+  </div>
+
+                  
+  <div class="animate-element">
+    <a class="uk-card uk-card-default card" href="work/bacha-coffee/index.html">
+      <div class="uk-card-media-top" style="background-image: url('app/uploads/2022/03/bacha.png')"></div>
+      <div class="description uk-width-1-1 uk-visible@s">
+        <div class="logo">
+          <img src=app/uploads/2022/03/bacha-logo-1.svg>
+        </div>
+        <div class="content">
+          <h3>Coffee, E‑Commerce.</h3>
+        </div>
+      </div>
+      <div class="description-mobile uk-width-1-1 uk-hidden@s">
+        <div class="logo">
+          <img src=app/uploads/2022/03/bacha-logo-1.svg>
+        </div>
+        <div class="content">
+          <h3>Coffee, E‑Commerce.</h3>
+        </div>
+      </div>
+    </a>
+  </div>
+
+                  
+  <div class="animate-element">
+    <a class="uk-card uk-card-default card" href="work/far-east-organization/index.html">
+      <div class="uk-card-media-top" style="background-image: url('app/uploads/2022/03/FEO.png')"></div>
+      <div class="description uk-width-1-1 uk-visible@s">
+        <div class="logo">
+          <img src=app/uploads/2022/03/FEO-logo-1.svg>
+        </div>
+        <div class="content">
+          <h3>Launching Luxury Property.</h3>
+        </div>
+      </div>
+      <div class="description-mobile uk-width-1-1 uk-hidden@s">
+        <div class="logo">
+          <img src=app/uploads/2022/03/FEO-logo-1.svg>
+        </div>
+        <div class="content">
+          <h3>Launching Luxury Property.</h3>
+        </div>
+      </div>
+    </a>
+  </div>
+
+                  
+  <div class="animate-element">
+    <a class="uk-card uk-card-default card" href="work/muuse/index.html">
+      <div class="uk-card-media-top" style="background-image: url('app/uploads/2022/03/muuse-1.png')"></div>
+      <div class="description uk-width-1-1 uk-visible@s">
+        <div class="logo">
+          <img src=app/uploads/2022/03/muuse-logo-1.svg>
+        </div>
+        <div class="content">
+          <h3>Takeaway, But Better.</h3>
+        </div>
+      </div>
+      <div class="description-mobile uk-width-1-1 uk-hidden@s">
+        <div class="logo">
+          <img src=app/uploads/2022/03/muuse-logo-1.svg>
+        </div>
+        <div class="content">
+          <h3>Takeaway, But Better.</h3>
+        </div>
+      </div>
+    </a>
+  </div>
+
+                  
+  <div class="animate-element">
+    <a class="uk-card uk-card-default card" href="work/hugo/index.html">
+      <div class="uk-card-media-top" style="background-image: url('app/uploads/2022/03/hugo-1.png')"></div>
+      <div class="description uk-width-1-1 uk-visible@s">
+        <div class="logo">
+          <img src=app/uploads/2022/03/hugo-logo-1.svg>
+        </div>
+        <div class="content">
+          <h3>Wealthcare In Singapore.</h3>
+        </div>
+      </div>
+      <div class="description-mobile uk-width-1-1 uk-hidden@s">
+        <div class="logo">
+          <img src=app/uploads/2022/03/hugo-logo-1.svg>
+        </div>
+        <div class="content">
+          <h3>Wealthcare In Singapore.</h3>
+        </div>
+      </div>
+    </a>
+  </div>
+
+      </div>
+  
+</div>
+
+<div id="values-approach" class="uk-width-1-1 value-prop-and-subsection-and-image uk-position-relative content-image-module bg--neutral padding remove-" uk-scrollspy="target: .animate-element; cls: uk-animation-slide-bottom-medium; delay: 200">
+  <div class="content-wrapper">
+    <div uk-grid class="uk-grid uk-flex-between mb-80 animate-element">
+            <div class="uk-child-width-1-1 width-45@m uk-width-2-5@l">
+        <h2>BREAKING AND REBUILDING THE AGENCY MODEL.</h2>
+      </div>
+                  <div class="richtext-content uk-child-width-1-1 width-55@m">
+        <p>We are an independent communications agency, established in 2019. We believe it’s time to be better partners for our clients. Our vision is to break, and re-build an out-of- date agency model. We don’t want to talk about our approach to planning communications. We want to understand your business challenges, and figure out how we can help. Our vision is to design lean, agile and effective teams around the specific needs of each individual client. We won’t inflate your costs with high overheads and overpaid senior members of staff.</p>
+<p><strong>We are genuine and transparent in everything that we do, and want to achieve transformational results through real partnerships.</strong></p>
+
+      </div>
+          </div>
+
+        <div class="image mb-80 animate-element">
+      <img src="app/uploads/2022/03/homepage-image-1.png" alt="BREAKING AND REBUILDING THE AGENCY MODEL." class="visible@1440">
+      <img src="app/uploads/2022/03/homepage-image-small-screen.png" alt="BREAKING AND REBUILDING THE AGENCY MODEL." class="uk-visible@s hidden@1440">
+      <img src="app/uploads/2022/03/homepage-image-mobile.png" alt="BREAKING AND REBUILDING THE AGENCY MODEL." class="uk-hidden@s">
+    </div>
+    
+    <div id="how-we-work" class="lower-section">
+      <div uk-grid class="uk-grid uk-flex-between mb-80 animate-element">
+                <div class="uk-child-width-1-1 width-45@m uk-width-2-5@l">
+          <h2>HOW WE WORK.</h2>
+        </div>
+                        <div class="richtext-content uk-child-width-1-1 width-55@m">
+          <p>We have lean teams that can deliver all digital marketing services for our clients. We allocate the best talent, for the best price, based on what you need. Most of all, we want to get away from the jargon, and acronyms that overcomplicate advertising. You’ll get straight honest answers, and clear business results.</p>
+<p><span style="color: #62b6cb;"><strong>Here’s what we do.</strong></span></p>
+
+        </div>
+              </div>
+
+      <div uk-grid class="uk-grid uk-grid-row-small uk-child-width-1-1 uk-child-width-1-3@s column--3">
+                                    <div class="subsection animate-element">
+            <div class="subsection-num mb-25">1</div>
+            <div class="richtext-content">
+              <p>We start by listening, focusing on your challenges, genuinely getting a handle on how marketing can help.</p>
+
+            </div>
+          </div>
+                            <div class="subsection animate-element">
+            <div class="subsection-num mb-25">2</div>
+            <div class="richtext-content">
+              <p>We research – using bespoke access to data and consumer panels, to show you clearly how advertising can deliver growth.</p>
+
+            </div>
+          </div>
+                            <div class="subsection animate-element">
+            <div class="subsection-num mb-25">3</div>
+            <div class="richtext-content">
+              <p>We set up the right strategy and team that will deliver results focused, data-driven advertising; maximising your return.</p>
+
+            </div>
+          </div>
+              </div>
+    </div>
+  </div>
+  <div class="bg-image uk-position-absolute" style="background-image: url(app/uploads/2022/03/tropical-silhoutte.png);"></div>
+</div>
+
+<div id="about-us" class="uk-width-1-1 about-us-slider uk-position-relative bg--neutral padding remove-bottom" style="background-image:url(app/uploads/2022/03/bg-about-us.png);">
+    <div class="content-wrapper">
+                <h2 class="mb-80" uk-scrollspy="cls: uk-animation-slide-bottom-medium; delay: 100;">ABOUT US.</h2>
+        
+                <div class="outer-slider">
+            <ul class="slide-items">
+                                                <li class="slide-0 uk-flex">
+                    <div class="uk-grid" uk-grid>
+                        <div class="uk-width-1-1 width-43@m" uk-scrollspy="cls: uk-animation-slide-bottom-medium; target: .animate-element; delay: 100;">
+                            <div class="content-column animate-element">
+                                <h3 class="uk-margin-small-bottom">CHARLIE NEWBERY</h3>
+                                <p class="subheader uk-margin-remove-top mb-40">FOUNDING PARTNER</p>
+                                <div class="richtext-content">
+                                    <p>Charlie has over 15 years of experience, leading global clients in London, Dubai, Hong Kong and Singapore. He was most recently APAC Chief Media Officer for Digitas, an integrated full service agency headquartered in Singapore.​</p>
+<p>His most recent key accounts were Samsung, Pan Pacific Hotels, Shangri La Hotels, Hewlett Packard Enterprise, &amp; Visa. During his time at Digitas, he dedicated himself to powering innovation through the smart use of new technologies and data. Key to his success was working closely with creative, data, and technology teams, to create highly personalized and engaging experiences.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-column uk-text-center uk-text-right@m uk-width-1-1 width-57@m uk-position-relative" uk-scrollspy="cls: uk-animation-slide-right-small; target: .animate-element; delay: 500;">
+                            <img class="animate-element" src="app/uploads/2022/04/charlie.png" alt="CHARLIE NEWBERY">
+                        </div>
+                    </div>
+                </li>    
+                                                <li class="slide-1 uk-flex">
+                    <div class="uk-grid" uk-grid>
+                        <div class="uk-width-1-1 width-43@m" uk-scrollspy="cls: uk-animation-slide-bottom-medium; target: .animate-element; delay: 100;">
+                            <div class="content-column animate-element">
+                                <h3 class="uk-margin-small-bottom">BEN MCANENY</h3>
+                                <p class="subheader uk-margin-remove-top mb-40">FOUNDING PARTNER</p>
+                                <div class="richtext-content">
+                                    <p>Ben has over 10 years’ experience as a Digital media professional, leading both regional and global strategy &amp; activation, across several continents. Throughout his career, he has been responsible for leading campaigns for some of the worlds largest brands, across both Digital and Traditional media.</p>
+<p>Initially, he stared as a performance specialist, working at the UKs largest independent performance agencies, where he was the global agency performance lead for Brands such as Nespresso and Mercedes Benz. During this period, he gained a vast experience across multiple verticals, ranging from Travel, Luxury products, Ecommerce, and B2B Tech.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-column uk-text-center uk-text-right@m uk-width-1-1 width-57@m uk-position-relative" uk-scrollspy="cls: uk-animation-slide-right-small; target: .animate-element; delay: 500;">
+                            <img class="animate-element" src="app/uploads/2022/04/ben.png" alt="BEN MCANENY">
+                        </div>
+                    </div>
+                </li>    
+                            </ul>
+        </div>
+
+        <div uk-slider class="slider">
+            <div class="uk-slider-container uk-position-relative">
+                <div class="slide-nav-mobile uk-position-absolute">
+                    <a class="slide-nav uk-slidenav-large uk-position-relative uk-padding-remove uk-hidden@s" href="#" uk-slidenav-previous uk-slider-item="previous" uk-scrollspy="cls: uk-animation-fade; delay: 500;"></a>
+                    <a class="slide-nav uk-slidenav-large uk-position-relative uk-padding-remove uk-hidden@s" href="#" uk-slidenav-next uk-slider-item="next"  uk-scrollspy="cls: uk-animation-fade; delay: 500;"></a>
+                </div>
+                <ul class="slide-items uk-slider-items uk-child-width-1-1">
+                                        <li class="uk-flex uk-flex-bottom">
+                        <div class="uk-grid" uk-grid>
+                            <div class="uk-width-1-1 width-43@m" uk-scrollspy="cls: uk-animation-slide-bottom-medium; target: .animate-element; delay: 100;">
+                                <div class="content-column animate-element">
+                                    <h3 class="uk-margin-small-bottom">CHARLIE NEWBERY</h3>
+                                    <p class="subheader uk-margin-remove-top mb-40">FOUNDING PARTNER</p>
+                                    <div class="richtext-content">
+                                        <p>Charlie has over 15 years of experience, leading global clients in London, Dubai, Hong Kong and Singapore. He was most recently APAC Chief Media Officer for Digitas, an integrated full service agency headquartered in Singapore.​</p>
+<p>His most recent key accounts were Samsung, Pan Pacific Hotels, Shangri La Hotels, Hewlett Packard Enterprise, &amp; Visa. During his time at Digitas, he dedicated himself to powering innovation through the smart use of new technologies and data. Key to his success was working closely with creative, data, and technology teams, to create highly personalized and engaging experiences.</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-column uk-text-center uk-text-right@m uk-width-1-1 width-57@m uk-position-relative" uk-scrollspy="cls: uk-animation-slide-right-small; target: .animate-element; delay: 500;">
+                                <img class="animate-element" src="app/uploads/2022/04/charlie.png" alt="CHARLIE NEWBERY">
+                            </div>
+                        </div>
+                    </li>    
+                                        <li class="uk-flex uk-flex-bottom">
+                        <div class="uk-grid" uk-grid>
+                            <div class="uk-width-1-1 width-43@m" uk-scrollspy="cls: uk-animation-slide-bottom-medium; target: .animate-element; delay: 100;">
+                                <div class="content-column animate-element">
+                                    <h3 class="uk-margin-small-bottom">BEN MCANENY</h3>
+                                    <p class="subheader uk-margin-remove-top mb-40">FOUNDING PARTNER</p>
+                                    <div class="richtext-content">
+                                        <p>Ben has over 10 years’ experience as a Digital media professional, leading both regional and global strategy &amp; activation, across several continents. Throughout his career, he has been responsible for leading campaigns for some of the worlds largest brands, across both Digital and Traditional media.</p>
+<p>Initially, he stared as a performance specialist, working at the UKs largest independent performance agencies, where he was the global agency performance lead for Brands such as Nespresso and Mercedes Benz. During this period, he gained a vast experience across multiple verticals, ranging from Travel, Luxury products, Ecommerce, and B2B Tech.</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-column uk-text-center uk-text-right@m uk-width-1-1 width-57@m uk-position-relative" uk-scrollspy="cls: uk-animation-slide-right-small; target: .animate-element; delay: 500;">
+                                <img class="animate-element" src="app/uploads/2022/04/ben.png" alt="BEN MCANENY">
+                            </div>
+                        </div>
+                    </li>    
+                                    </ul>
+                <ul class="slide-dotnav uk-dotnav uk-position-absolute uk-visible@m">
+                                        <li uk-slider-item="0"><a href="#"></a></li>
+                                        <li uk-slider-item="1"><a href="#"></a></li>
+                                    </ul>
+                <div class="slide-nav-mobile uk-position-absolute">
+                    <a class="slide-nav uk-slidenav-large uk-position-relative uk-padding-remove hidden@l" href="#" uk-slidenav-previous uk-slider-item="previous" uk-scrollspy="cls: uk-animation-fade; delay: 500;"></a>
+                    <a class="slide-nav uk-slidenav-large uk-position-relative uk-padding-remove hidden@l" href="#" uk-slidenav-next uk-slider-item="next"  uk-scrollspy="cls: uk-animation-fade; delay: 500;"></a>
+                </div>
+            </div>
+            <a class="slide-nav uk-slidenav-large uk-position-absolute uk-position-center-left uk-padding-remove visible@l" href="#" uk-slidenav-previous uk-slider-item="previous" uk-scrollspy="cls: uk-animation-fade; delay: 500;"></a>
+            <a class="slide-nav uk-slidenav-large uk-position-absolute uk-position-center-right uk-padding-remove visible@l" href="#" uk-slidenav-next uk-slider-item="next"  uk-scrollspy="cls: uk-animation-fade; delay: 500;"></a>
+        </div>
+    </div>
+</div>
+
+<div id="capabilities" class="quick-links bg-- padding remove-">
+    <div class="content-wrapper">
+        <div class="content">
+            <div 
+                        uk-scrollspy="cls: uk-animation-slide-bottom; delay: 100;                        ">
+                                <h2 class="uk-text-center mb-25">OUR CAPABILITIES.</h2>
+                                                <p class="uk-text-center uk-margin-remove-top uk-margin-large-bottom">Entirely focus on business results.</p>
+                            </div>
+                        <div class="links uk-grid uk-grid-medium uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid uk-scrollspy="cls: uk-animation-slide-bottom; target: .animate-element; delay: 200;                        ">
+                                <div class="link-item animate-element">
+                    <div class="uk-height-1-1 uk-flex uk-flex-column">
+                        <img class="icon" src="app/uploads/2022/03/media-consultancy-icon.svg" alt="MEDIA CONSULTANCY">
+                                                <h3 class="text__color--white uk-margin-top mb-50">MEDIA CONSULTANCY</h3>
+                                                                        <div class="uk-margin-auto-top">
+                            <a href="media-consultancy/index.html" class="button button--simple">Learn More</a>
+                        </div>
+                                            </div>
+                </div>
+                                <div class="link-item animate-element">
+                    <div class="uk-height-1-1 uk-flex uk-flex-column">
+                        <img class="icon" src="app/uploads/2022/03/strategy-icon.svg" alt="STRATEGY">
+                                                <h3 class="text__color--white uk-margin-top mb-50">STRATEGY</h3>
+                                                                        <div class="uk-margin-auto-top">
+                            <a href="strategy/index.html" class="button button--simple">Learn More</a>
+                        </div>
+                                            </div>
+                </div>
+                                <div class="link-item animate-element">
+                    <div class="uk-height-1-1 uk-flex uk-flex-column">
+                        <img class="icon" src="app/uploads/2022/03/creative-icon.svg" alt="CREATIVE">
+                                                <h3 class="text__color--white uk-margin-top mb-50">CREATIVE</h3>
+                                                                        <div class="uk-margin-auto-top">
+                            <a href="creative/index.html" class="button button--simple">Learn More</a>
+                        </div>
+                                            </div>
+                </div>
+                                <div class="link-item animate-element">
+                    <div class="uk-height-1-1 uk-flex uk-flex-column">
+                        <img class="icon" src="app/uploads/2022/03/media-icon.svg" alt="MEDIA">
+                                                <h3 class="text__color--white uk-margin-top mb-50">MEDIA</h3>
+                                                                        <div class="uk-margin-auto-top">
+                            <a href="media/index.html" class="button button--simple">Learn More</a>
+                        </div>
+                                            </div>
+                </div>
+                                <div class="link-item animate-element">
+                    <div class="uk-height-1-1 uk-flex uk-flex-column">
+                        <img class="icon" src="app/uploads/2022/03/seo-icon.svg" alt="SEO">
+                                                <h3 class="text__color--white uk-margin-top mb-50">SEO</h3>
+                                                                        <div class="uk-margin-auto-top">
+                            <a href="seo/index.html" class="button button--simple">Learn More</a>
+                        </div>
+                                            </div>
+                </div>
+                                <div class="link-item animate-element">
+                    <div class="uk-height-1-1 uk-flex uk-flex-column">
+                        <img class="icon" src="app/uploads/2022/03/crm-icon.svg" alt="CRM">
+                                                <h3 class="text__color--white uk-margin-top mb-50">CRM</h3>
+                                                                        <div class="uk-margin-auto-top">
+                            <a href="crm/index.html" class="button button--simple">Learn More</a>
+                        </div>
+                                            </div>
+                </div>
+                                <div class="link-item animate-element">
+                    <div class="uk-height-1-1 uk-flex uk-flex-column">
+                        <img class="icon" src="app/uploads/2022/03/marketing-icon.svg" alt="MARKET RESEARCH">
+                                                <h3 class="text__color--white uk-margin-top mb-50">MARKET RESEARCH</h3>
+                                                                        <div class="uk-margin-auto-top">
+                            <a href="market-research/index.html" class="button button--simple">Learn More</a>
+                        </div>
+                                            </div>
+                </div>
+                                <div class="link-item animate-element">
+                    <div class="uk-height-1-1 uk-flex uk-flex-column">
+                        <img class="icon" src="app/uploads/2022/03/digital-design-icon.svg" alt="DIGITAL DESIGN">
+                                                <h3 class="text__color--white uk-margin-top mb-50">DIGITAL DESIGN</h3>
+                                                                        <div class="uk-margin-auto-top">
+                            <a href="digital-design/index.html" class="button button--simple">Learn More</a>
+                        </div>
+                                            </div>
+                </div>
+                            </div>
+                    </div>
+    </div>
+    <div class="bg-image uk-visible@m" style="background-image: url();"></div>
+</div>
+
+<div id="contact-us" class="contact-us uk-with-1-1 uk-position-relative bg--dark padding remove-">
+  <div class="content-wrapper">
+    <div uk-grid class="uk-grid">
+      <div class="content uk-width-1-1 uk-width-1-2@m" 
+            uk-scrollspy="cls: uk-animation-slide-bottom-small; target: .animate-element; delay: 500;            ">
+                <h2 class="animate-element">WE&#8217;D LOVE TO<br />
+HEAR <span>FROM YOU.</span></h2>
+                        <div class="contact-us-details animate-element">
+                    <a href="mailto:info@breakmedia.net" class="email-address">info@breakmedia.net</a>
+                  </div>
+                <div class="bg-img-mobile uk-position-absolute uk-hidden@m" style="background-image: url(app/uploads/2022/03/bg-contact-us-mobile.png);"></div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-img uk-position-absolute uk-visible@m" style="background-image: url(app/uploads/2022/03/bg-contact-us.png);"></div>
+</div>
+
+			</div>
+					</section>
+
+					<footer id="footer">
+				<div class="uk-width-1-1 global-footer padding">
+  <div class="content-wrapper">
+    <div class="content-wrapper-inner">
+      <div uk-grid class="uk-grid uk-flex-between">
+        <div class="logo-column">
+          <div class="logo">
+            <img src="app/uploads/2022/03/break-media-logo.svg" alt="LOGO">
+          </div>
+          <div class="social-media-links">
+                          <ul class="uk-list uk-flex uk-flex-center uk-flex-between@s uk-margin-remove-bottom">
+                                <li class="uk-margin-remove-top uk-margin-small-right"><a href="#"><img src="#" alt=""></a></li>
+                                <li class="uk-margin-remove-top uk-margin-small-right"><a href="#"><img src="#" alt=""></a></li>
+                                <li class="uk-margin-remove-top"><a href="#"><img src="#" alt=""></a></li>
+                              </ul>
+                      </div>
+        </div>
+        
+        <div class="footer-details-column uk-width-1-1 uk-width-3-4@m uk-text-center uk-text-left@s">
+          <div class="uk-grid uk-grid-large" uk-grid>
+            <div class="uk-width-1-1 uk-width-1-3@s">
+              <div class="address">
+                <p class="column-label uk-margin-small-bottom">LOCATION</p>
+                <p class="uk-margin-remove">UEN: 201932728W <br />
+7 Temasek Boulevard, <br />
+#12-07 Suntec Tower One, <br />
+Singapore 038987</p>
+              </div>
+            </div>
+
+            <div class="uk-width-1-1 uk-width-1-3@s">
+              <div class="fax-number">
+                <p class="column-label uk-margin-small-bottom">FAX NUMBER</p>
+                <p class="uk-margin-remove"><a href="tel:+65 6917 8977">+65 6917 8977</a></p>
+              </div>
+            </div>
+
+            <div class="uk-width-1-1 uk-width-1-3@s">
+              <div class="footer-menu">
+                <p class="column-label uk-margin-small-bottom">OTHER INFORMATION</p>
+                                <ul class="uk-list uk-margin-remove">
+                                    <li class="uk-margin-remove-top"><a href="privacy-policy/index.html">Privacy Policy</a></li>
+                                  </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <p class="copyright uk-text-center mt-40 uk-margin-remove-bottom">©2022 by Break Media PTE LTD.</p>
+  </div>
+  <a href="#top" class="scroll-top-btn" uk-scroll><img src="app/themes/breakmedia/dist/images/up-arrow-icon.svg" alt="Scroll Up"></a>
+</div>
+			</footer>
+			<script type='text/javascript' src='wp/wp-includes/js/dist/vendor/wp-polyfill89b1.js?ver=7.4.4' id='wp-polyfill-js'></script>
+<script type='text/javascript' id='wp-polyfill-js-after'>
+( 'fetch' in window ) || document.write( '<script src="wp/wp-includes/js/dist/vendor/wp-polyfill-fetch6e0e.js?ver=3.0.0"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="wp/wp-includes/js/dist/vendor/wp-polyfill-node-contains2e00.js?ver=3.42.0"></scr' + 'ipt>' );( window.DOMRect ) || document.write( '<script src="wp/wp-includes/js/dist/vendor/wp-polyfill-dom-rect2e00.js?ver=3.42.0"></scr' + 'ipt>' );( window.URL && window.URL.prototype && window.URLSearchParams ) || document.write( '<script src="wp/wp-includes/js/dist/vendor/wp-polyfill-url5aed.js?ver=3.6.4"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="wp/wp-includes/js/dist/vendor/wp-polyfill-formdatae9bd.js?ver=3.0.12"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="wp/wp-includes/js/dist/vendor/wp-polyfill-element-closest4c56.js?ver=2.0.2"></scr' + 'ipt>' );( 'objectFit' in document.documentElement.style ) || document.write( '<script src="wp/wp-includes/js/dist/vendor/wp-polyfill-object-fit531b.js?ver=2.3.4"></scr' + 'ipt>' );
+</script>
+<script type='text/javascript' id='contact-form-7-js-extra'>
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/breakmedia.lndo.site\/wp-json\/","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='app/plugins/contact-form-7/includes/js/index5406.js?ver=5.5.6' id='contact-form-7-js'></script>
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js' id='jquery-js'></script>
+<script type='text/javascript' src='app/plugins/jquery-validation-for-contact-form-7/includes/assets/js/jquery.validate.min5fba.js?ver=5.2' id='jvcf7_jquery_validate-js'></script>
+<script type='text/javascript' id='jvcf7_validation-js-extra'>
+/* <![CDATA[ */
+var scriptData = {"jvcf7_default_settings":{"jvcf7_show_label_error":"errorMsgshow","jvcf7_invalid_field_design":"theme_0"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='app/plugins/jquery-validation-for-contact-form-7/includes/assets/js/jvcf7_validation5fba.js?ver=5.2' id='jvcf7_validation-js'></script>
+<script type='text/javascript' src='app/themes/breakmedia/dist/js/app.min.js' id='sage/js-js'></script>
+<script type='text/javascript' src='wp/wp-includes/js/wp-embeda78f.js?ver=5.7.1' id='wp-embed-js'></script>
+
+			</body>
+
+<!-- Mirrored from breakmedia.lndo.site/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jun 2026 10:15:26 GMT -->
+</html>
