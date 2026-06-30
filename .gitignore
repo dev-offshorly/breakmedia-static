@@ -1,0 +1,7 @@
+# Python tooling artifacts
+__pycache__/
+*.pyc
+
+# OS cruft
+.DS_Store
+update-breakmedia-content.zip
