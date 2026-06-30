@@ -1,0 +1,238 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js no-svg ie ie6 lt-ie9 lt-ie8 lt-ie7" lang="en-US"> <![endif]-->
+<!--[if IE 7]><html class="no-js no-svg ie ie7 lt-ie9 lt-ie8" lang="en-US"> <![endif]-->
+<!--[if IE 8]><html class="no-js no-svg ie ie8 lt-ie9" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js no-svg" lang="en-US"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="app/themes/breakmedia/style.css" type="text/css" media="screen" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Page Not Found &#x2d; Breakmedia</title>
+    <meta name='robots' content='noindex, nofollow' />
+    <link rel="icon" href="app/uploads/2022/03/cropped-favicon-blue.png" />
+    <link rel='stylesheet' href='app/themes/breakmedia/dist/css/app.min.css' type='text/css' media='all' />
+    <style>
+        .content-wrapper {
+            max-width: 1316px;
+            margin: 0 auto;
+        }
+
+        @media screen and (min-width: 1280px) and (max-width: 1440px) {
+            .content-wrapper { max-width: 80%; }
+        }
+
+        @media screen and (max-width: 1280px) {
+            .content-wrapper { max-width: 960px; }
+        }
+
+        @media screen and (max-width: 960px) {
+            .content-wrapper { padding: 0 25px; }
+        }
+
+        /* 404 section */
+        .not-found-section {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 25px;
+            background-color: #f2f3f3;
+        }
+
+        .not-found-section .inner {
+            text-align: center;
+            max-width: 600px;
+        }
+
+        .not-found-section .error-code {
+            font-family: brandon_grotesquebold, Arial, sans-serif;
+            font-size: clamp(100px, 20vw, 180px);
+            line-height: 1;
+            color: #62b6cb;
+            margin: 0 0 16px;
+            letter-spacing: -4px;
+        }
+
+        .not-found-section h1 {
+            font-family: brandon_grotesquebold, Arial, sans-serif;
+            font-size: clamp(24px, 4vw, 38px);
+            color: #002239;
+            margin: 0 0 20px;
+            line-height: 1.2;
+        }
+
+        .not-found-section p {
+            font-family: proxima_novaregular, Arial, sans-serif;
+            font-size: 17px;
+            color: #6b7c8d;
+            margin: 0 0 40px;
+            line-height: 1.7;
+        }
+
+        .btn-home {
+            display: inline-block;
+            font-family: brandon_grotesquebold, Arial, sans-serif;
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #fff;
+            background-color: #62b6cb;
+            padding: 16px 40px;
+            text-decoration: none;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-home:hover {
+            background-color: #002239;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Global footer */
+        .global-footer {
+            background-color: #002239;
+            color: #acc1d5;
+            padding: 60px 0 40px;
+            position: relative;
+        }
+
+        .global-footer .content-wrapper-inner {
+            border-bottom: 1px solid #2e4353;
+            padding-bottom: 40px;
+            margin-bottom: 30px;
+        }
+
+        .global-footer .logo-column img {
+            width: 130px;
+            display: block;
+        }
+
+        .global-footer .column-label {
+            font-family: brandon_grotesquebold, Arial, sans-serif;
+            font-size: 11px;
+            letter-spacing: 3.8px;
+            text-transform: uppercase;
+            color: #fff;
+            margin-bottom: 12px;
+        }
+
+        .global-footer p,
+        .global-footer a {
+            font-family: proxima_novaregular, Arial, sans-serif;
+            font-size: 14px;
+            color: #acc1d5;
+            line-height: 1.8;
+            text-decoration: none;
+        }
+
+        .global-footer a:hover {
+            color: #62b6cb;
+        }
+
+        .global-footer .copyright {
+            font-family: proxima_novaregular, Arial, sans-serif;
+            font-size: 13px;
+            color: #acc1d5;
+            text-align: center;
+            margin: 0;
+        }
+
+        .footer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .footer-details-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            flex: 1;
+            min-width: 260px;
+        }
+
+        .footer-col {
+            min-width: 160px;
+        }
+
+        @media screen and (max-width: 640px) {
+            .footer-grid {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+
+        /* Divider line between 404 number and heading */
+        .not-found-section .divider {
+            width: 60px;
+            height: 3px;
+            background-color: #62b6cb;
+            margin: 0 auto 28px;
+        }
+    </style>
+</head>
+
+<body class="page-template-default page wp-front" data-template="base.twig">
+
+    <header class="uk-visible@m">
+        <div id="page-header" class="uk-text-center">
+            <a href="/"><img src="app/uploads/2022/03/break-media-logo.svg" alt="Breakmedia"></a>
+        </div>
+    </header>
+
+    <header uk-sticky class="uk-hidden@m uk-sticky uk-sticky-fixed">
+        <div id="page-header" class="uk-text-center">
+            <a href="/"><img src="app/uploads/2022/03/break-media-logo.svg" alt="Breakmedia"></a>
+        </div>
+    </header>
+
+    <section id="content" role="main">
+        <div class="not-found-section">
+            <div class="inner">
+                <p class="error-code">404</p>
+                <div class="divider"></div>
+                <h1>Page Not Found</h1>
+                <p>The page you're looking for has moved, been removed, or doesn't exist. Let's get you back on track.</p>
+                <a href="/" class="btn-home">Back to Home</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="global-footer">
+            <div class="content-wrapper">
+                <div class="content-wrapper-inner">
+                    <div class="footer-grid">
+                        <div class="logo-column">
+                            <img src="app/uploads/2022/03/break-media-logo.svg" alt="Breakmedia">
+                        </div>
+                        <div class="footer-details-grid">
+                            <div class="footer-col">
+                                <p class="column-label">Location</p>
+                                <p>UEN: 201932728W<br>
+                                7 Temasek Boulevard,<br>
+                                #12-07 Suntec Tower One,<br>
+                                Singapore 038987</p>
+                            </div>
+                            <div class="footer-col">
+                                <p class="column-label">Fax Number</p>
+                                <p><a href="tel:+6569178977">+65 6917 8977</a></p>
+                            </div>
+                            <div class="footer-col">
+                                <p class="column-label">Other Information</p>
+                                <p><a href="privacy-policy/">Privacy Policy</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="copyright">&#169;2022 by Break Media PTE LTD.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
